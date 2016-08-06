@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VGK-CX-bDm">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cHv-fT-wbu">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cHv-fT-wbu" secondAttribute="trailing" id="5jc-pX-0Cw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cHv-fT-wbu" secondAttribute="bottom" id="P3y-N4-tKg"/>
+                            <constraint firstItem="cHv-fT-wbu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Q1g-wb-Q9I"/>
+                            <constraint firstItem="cHv-fT-wbu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gjc-9G-b4R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ma5-YM-raX">
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="trash" id="336-Pj-ZXb">
+                                <connections>
+                                    <action selector="deleteAction:" destination="BYZ-38-t0r" id="CGb-sZ-fCu"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="全选" id="pHu-ge-IW2">
+                                <connections>
+                                    <action selector="allselect:" destination="BYZ-38-t0r" id="iVM-Nd-4hn"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="0Np-Mw-qPg">
+                            <connections>
+                                <action selector="editData:" destination="BYZ-38-t0r" id="y5X-lQ-GI1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="allselect" destination="pHu-ge-IW2" id="Gg1-PK-yIs"/>
+                        <outlet property="deleteBtn" destination="336-Pj-ZXb" id="In3-5X-wap"/>
+                        <outlet property="editBtn" destination="0Np-Mw-qPg" id="0YY-HJ-Wlx"/>
+                        <outlet property="tableView" destination="cHv-fT-wbu" id="j0e-Ft-Oe6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="307"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bXy-yT-PkL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VGK-CX-bDm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MGU-Cs-bh7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Snk-NS-Pgs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swU-wg-0fF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="307"/>
+        </scene>
+    </scenes>
+</document>
